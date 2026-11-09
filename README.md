@@ -3,7 +3,7 @@
 A status line for [Claude Code](https://code.claude.com/docs/en/statusline): account, model, effort, session name, working directory, usage limits and context window fill.
 
 ```
-Aleksei (pro) │ Opus 5.5 (high) │ Status line setup │ claude-statusline │ usage: 4:10 24% · w 3% │ ctx 8%
+Aleksei (pro) │ Opus 5.5 (high) │ Status line setup │ …ents/github/claude-statusline │ usage: 4:10 24% · w 3% │ ctx 8%
 ```
 
 | Block | What it shows | Source |
@@ -11,7 +11,7 @@ Aleksei (pro) │ Opus 5.5 (high) │ Status line setup │ claude-statusline �
 | `Aleksei (pro)` | account name and plan | `~/.claude.json` -> `oauthAccount.displayName`, `organizationType` |
 | `Opus 5.5 (high)` | model and effort | `model.display_name`, `effort.level` |
 | `Status line setup` | session name (auto-generated or set via `/rename`) | `session_name` |
-| `claude-statusline` | current directory, at most 30 characters (longer paths keep the tail: `…ents/github/my-project`) | `workspace.current_dir` |
+| `…ents/github/claude-statusline` | current directory, at most 30 characters (longer paths keep the tail) | `workspace.current_dir` |
 | `usage: 4:10 24%` | 5-hour limit: time until reset (H:MM) and percent used | `rate_limits.five_hour` |
 | `w 3%` | weekly limit | `rate_limits.seven_day` |
 | `ctx 8%` | context window fill | `context_window.used_percentage` |
